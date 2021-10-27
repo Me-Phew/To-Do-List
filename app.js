@@ -8,6 +8,11 @@ function addTaskAvailable(){
 }
 
 addTaskBtn.addEventListener("click", addTask);
+taskNameInput.addEventListener("keyup", event => {
+    if(event.key === "Enter"){
+        addTask();
+    }
+});
 
 let taskList = document.getElementById("task-list");
 
